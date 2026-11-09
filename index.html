@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>NovaTech Store</title>
+    <link rel="stylesheet" href="style.css">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+
+   
+<header id="inicio">
+    <h1>NovaTech Store</h1>
+    <p>Tu tienda de tecnología</p>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+        
+
+<a href="#carrito">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Carrito
+    <span id="contador-carrito">0</span>
+</a>
+
+
+    </nav>
+</header>
+ 
+
+    <main>
+        <section>
+            <h2>Bienvenido a NovaTech Store</h2>
+            <p>
+                Descubre nuestros productos
+                tecnológicos de demostración.
+            </p>
+        </section>
+        
+<section id="productos" class="catalogo">
+    <h2>Nuestros productos</h2>
+
+    <div class="productos">
+        <article class="producto">
+            
+<div class="producto-imagen">
+    <img src="imagenes/laptop.jpg" alt="Laptop Pro">
+</div>
+
+
+            <h3>Laptop Pro</h3>
+
+            <p>
+                Computadora portátil ideal
+                para trabajar y estudiar.
+            </p>
+
+            <span class="precio">$850</span>
+            
+
+<button class="btn-producto" onclick="verProducto()">Ver producto</button>
+
+<button class="btn-producto" onclick="agregarAlCarrito('Laptop Pro', 850)">
+    🛒 Agregar al carrito
+</button>
+
+
+
+            <p class="aviso-producto">
+                Producto de demostración
+            </p>
+        </article>
+    
+    
+<!-- PRODUCTO 2 -->
+<article class="producto">
+    
+<div class="producto-imagen">
+    <img src="imagenes/audifonos.jpg" alt="Audífonos">
+</div>
+
+
+    <h3>Audífonos Wireless</h3>
+
+    <p>
+        Audífonos inalámbricos
+        con excelente calidad de sonido.
+    </p>
+
+    <span class="precio">$75</span>
+    
+    
+
+<button class="btn-producto" onclick="verAudifonos()">Ver producto</button>
+
+<button class="btn-producto" onclick="agregarAlCarrito('Audífonos Wireless', 75)">
+    🛒 Agregar al carrito
+</button>
+
+
+
+    <p class="aviso-producto">
+        Producto de demostración
+    </p>
+</article>
+
+<!-- PRODUCTO 3 -->
+<article class="producto">
+    
+<div class="producto-imagen">
+    <img src="imagenes/teclado.jpg" alt="Teclado Mecánico">
+</div>
+
+
+    <h3>Teclado Mecánico</h3>
+
+    <p>
+        Teclado moderno ideal
+        para trabajar y estudiar.
+    </p>
+
+    <span class="precio">$120</span>
+    
+
+<button class="btn-producto" onclick="verTeclado()">Ver producto</button>
+
+<button class="btn-producto" onclick="agregarAlCarrito('Teclado Mecánico', 120)">
+    🛒 Agregar al carrito
+</button>
+
+
+
+
+    <p class="aviso-producto">
+        Producto de demostración
+    </p>
+</article>
+
+<!-- PRODUCTO 4 -->
+<article class="producto">
+   
+<div class="producto-imagen">
+    <img src="imagenes/monitor.jpg" alt="Monitor Full HD">
+</div>
+
+
+    <h3>Monitor Full HD</h3>
+
+    <p>
+        Monitor de alta definición
+        para oficina y entretenimiento.
+    </p>
+
+    <span class="precio">$210</span>
+    
+
+<button class="btn-producto" onclick="verMonitor()">Ver producto</button>
+
+<button class="btn-producto" onclick="agregarAlCarrito('Monitor Full HD', 210)">
+    🛒 Agregar al carrito
+</button>
+
+
+
+
+    <p class="aviso-producto">
+        Producto de demostración
+    </p>
+</article>
+
+</div>
+
+</section>
+
+<!-- CARRITO DE COMPRAS -->
+<section id="carrito" class="carrito">
+    <h2>🛒 Mi carrito de compras</h2>
+
+    <p id="carrito-vacio">
+        Tu carrito está vacío.
+    </p>
+
+    <div id="lista-carrito"></div>
+
+    <h3>Total: $<span id="total-carrito">0</span></h3>
+    
+<button id="btn-vaciar" onclick="vaciarCarrito()">
+    🗑️ Vaciar carrito
+    <button id="btn-finalizar" onclick="finalizarCompra()">
+    ✅ Finalizar compra
+</button>
+</button>
+
+</section>
+
+    </main>
+
+<div id="ventana-producto" class="modal" hidden>
+    <div class="modal-contenido">
+        <h2 id="modal-titulo">Producto</h2>
+        <p id="modal-descripcion"></p>
+        <p id="modal-precio"></p>
+        <button onclick="cerrarProducto()">Cerrar</button>
+    </div>
+</div>
+<section id="contacto" class="contacto">
+    <h2>¿Necesitas más información?</h2>
+    <p>Contáctanos para consultar sobre nuestros productos.</p>
+    
+<div class="botones-contacto">
+    <a href="https://wa.me/50684200561" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+        WhatsApp
+    </a>
+
+    
+<a href="https://t.me/NAMARKSOLUTIONS" target="_blank" rel="noopener noreferrer" class="btn-telegram">
+
+        <i class="fa-brands fa-telegram"></i>
+        Telegram
+    </a>
+</div>
+
+</section>
+    <footer>
+        <p>
+            Proyecto de demostración
+            desarrollado por Namark Solutions.
+        </p>
+    </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
