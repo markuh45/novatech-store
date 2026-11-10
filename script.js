@@ -269,3 +269,39 @@ function finalizarCompra() {
     carrito = [];
     mostrarCarrito();
 }
+
+
+/* BUSCADOR DE PRODUCTOS */
+
+const buscador = document.getElementById("buscador-productos");
+const mensaje = document.getElementById("sin-resultados");
+
+buscador.addEventListener("input", function () {
+
+    const texto = buscador.value.toLowerCase().trim();
+    const productos = document.querySelectorAll(".producto");
+
+    let encontrados = 0;
+
+    productos.forEach(function (producto) {
+
+        const nombre = producto.textContent.toLowerCase();
+
+        if (nombre.includes(texto)) {
+            producto.style.display = "";
+            encontrados++;
+        } else {
+            producto.style.display = "none";
+        }
+
+    });
+
+    if (encontrados === 0) {
+        mensaje.style.display = "block";
+    } else {
+        mensaje.style.display = "none";
+    }
+
+});
+
+

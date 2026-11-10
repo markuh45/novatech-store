@@ -770,3 +770,36 @@ header nav a:hover {
         padding: 13px 22px;
     }
 }
+
+/* BUSCADOR DE PRODUCTOS */
+
+.buscador-contenedor {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.buscador-contenedor label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #0f172a;
+}
+
+#buscador-productos {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 16px;
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s,
+                box-shadow 0.3s;
+}
+
+#buscador-productos:focus {
+    border-color: #0284c7;
+    box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.12);
+}
