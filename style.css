@@ -526,3 +526,247 @@ html {
 #btn-finalizar:hover {
     background-color: #146c43;
 }
+
+/* ==================================
+   REDISEÑO NOVATECH STORE
+   NAMARK SOLUTIONS
+================================== */
+
+/* Encabezado moderno */
+header {
+    background: linear-gradient(135deg, #020617, #0f172a, #075985);
+    color: white;
+    padding: 30px 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* Nombre de la tienda */
+header h1 {
+    color: #38bdf8;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0 0 10px;
+}
+
+/* Descripción */
+header p {
+    color: #cbd5e1;
+    font-size: 16px;
+}
+
+/* Menú de navegación */
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+header nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+header nav a:hover {
+    background-color: #0284c7;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Adaptación a celulares */
+@media (max-width: 600px) {
+    header {
+        padding: 25px 12px;
+    }
+
+    header nav {
+        gap: 6px;
+    }
+
+    header nav a {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+}
+
+/* BANNER PRINCIPAL */
+
+.hero {
+    background: linear-gradient(135deg, #0f172a, #075985);
+    color: white;
+    padding: 90px 25px;
+    border-radius: 18px;
+    margin-bottom: 35px;
+}
+
+.hero-contenido {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.hero-etiqueta {
+    color: #7dd3fc;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h2 {
+    color: white;
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.2;
+    margin: 22px 0;
+}
+
+.hero p {
+    color: #cbd5e1;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.hero-boton {
+    display: inline-block;
+    background: #38bdf8;
+    color: #082f49;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-boton:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* ANIMACIÓN DEL BANNER */
+
+.hero-contenido {
+    animation: aparecer 0.9s ease-out;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ACCESIBILIDAD: REDUCIR MOVIMIENTO */
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-contenido {
+        animation: none;
+    }
+}
+
+
+/* TARJETAS MODERNAS NOVATECH STORE */
+
+.producto {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.producto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* EFECTO EN LAS IMÁGENES */
+
+.producto-imagen img {
+    transition: transform 0.4s ease;
+}
+
+.producto:hover .producto-imagen img {
+    transform: scale(1.06);
+}
+
+/* BOTONES MÁS MODERNOS */
+
+.btn-producto {
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.btn-producto:hover {
+    background-color: #0369a1;
+    transform: translateY(-2px);
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+    .producto,
+    .producto-imagen img,
+    .btn-producto {
+        transition: none;
+    }
+}
+
+/* DISEÑO RESPONSIVE NOVATECH STORE */
+
+/* Tabletas */
+@media (max-width: 900px) {
+    .productos {
+        gap: 20px;
+    }
+
+    .producto {
+        width: 40%;
+        box-sizing: border-box;
+    }
+
+    .hero {
+        padding: 65px 20px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .productos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .hero {
+        padding: 45px 15px;
+        border-radius: 12px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-boton {
+        padding: 13px 22px;
+    }
+}
