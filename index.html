@@ -76,11 +76,19 @@
     No encontramos productos que coincidan con tu búsqueda.
 </p>
 
+<!-- FILTROS POR CATEGORÍA -->
+<div class="filtros-categorias">
+    <button type="button" data-categoria="todos">Todos</button>
+    <button type="button" data-categoria="laptops">Laptops</button>
+    <button type="button" data-categoria="accesorios">Accesorios</button>
+    <button type="button" data-categoria="monitores">Monitores</button>
+</div>
+
 <section id="productos" class="catalogo">
     <h2>Nuestros productos</h2>
 
     <div class="productos">
-        <article class="producto">
+      <article class="producto" data-categoria="laptops">
             
 <div class="producto-imagen">
     <img src="imagenes/laptop.jpg" alt="Laptop Pro">
@@ -112,7 +120,9 @@
     
     
 <!-- PRODUCTO 2 -->
-<article class="producto">
+
+<article class="producto" data-categoria="accesorios">
+
     
 <div class="producto-imagen">
     <img src="imagenes/audifonos.jpg" alt="Audífonos">
@@ -144,7 +154,9 @@
 </article>
 
 <!-- PRODUCTO 3 -->
-<article class="producto">
+
+<article class="producto" data-categoria="accesorios">
+
     
 <div class="producto-imagen">
     <img src="imagenes/teclado.jpg" alt="Teclado Mecánico">
@@ -176,7 +188,11 @@
 </article>
 
 <!-- PRODUCTO 4 -->
-<article class="producto">
+
+
+<article class="producto" data-categoria="monitores">
+
+
    
 <div class="producto-imagen">
     <img src="imagenes/monitor.jpg" alt="Monitor Full HD">
@@ -223,12 +239,15 @@
 
     <h3>Total: $<span id="total-carrito">0</span></h3>
     
+
 <button id="btn-vaciar" onclick="vaciarCarrito()">
     🗑️ Vaciar carrito
-    <button id="btn-finalizar" onclick="finalizarCompra()">
+</button>
+
+<button id="btn-finalizar" onclick="finalizarCompra()">
     ✅ Finalizar compra
 </button>
-</button>
+
 
 </section>
 

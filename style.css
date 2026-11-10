@@ -803,3 +803,43 @@ header nav a:hover {
     border-color: #0284c7;
     box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.12);
 }
+
+/* FILTROS POR CATEGORÍAS */
+
+.filtros-categorias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0 35px;
+}
+
+.filtros-categorias button {
+    background: white;
+    color: #0f172a;
+    border: 2px solid #cbd5e1;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filtros-categorias button:hover {
+    background: #0284c7;
+    color: white;
+    border-color: #0284c7;
+}
+
+.filtros-categorias button.activo {
+    background: #0284c7;
+    color: white;
+    border-color: #0284c7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .filtros-categorias button {
+        transition: none;
+    }
+}
